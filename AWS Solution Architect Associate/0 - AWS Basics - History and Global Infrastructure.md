@@ -53,7 +53,7 @@ Factors to consider when selecting a region:
 
 ## **Key AWS Services**
 - **Global Services**:
-  - **IAM (Identity and Access Management)**.
+  - **IAM (Identity and Access Management)**. [[AWS Services - IAM (Identity and Access Management)]]
   - **Route 53** (DNS service).
   - **CloudFront** (Content Delivery Network).
   - **WAF (Web Application Firewall)**.
