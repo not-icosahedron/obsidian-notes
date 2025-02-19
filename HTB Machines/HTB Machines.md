@@ -1,4 +1,1 @@
-# Linux Machines
-# Windows Machines
-## Active Directory
-# Web App Machines
+Following TJ_Null and other lists of HTB Machines, here are the walkthrough of the machines I practiced on; divided in [[Linux Machines]], [[Windows Machines]], [[Active Directory Sets]], [[Web App Machines]].
