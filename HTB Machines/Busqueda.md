@@ -1,4 +1,4 @@
-## Initial Enumeration
+# Initial Enumeration
 
 For this machine I decided to try the `autorecon <ip-address>` command.
 Soon I received the output that port 80/tcp and 22/tcp were open, so I went to check out the website on port 80 (HTTP).
